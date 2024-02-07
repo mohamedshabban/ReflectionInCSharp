@@ -2,6 +2,12 @@
 {
     internal class Program
     {
+
+        /// <param name="args"></param>
+        static void Main(string[] args)
+        {
+            ReflectionFn();
+        }
         /// <summary>
         /// Reflections refer to the ability of program to examine and interact with its own structure at runtime
         /// this includes inspecting and manipulating types, methods, props, and other elements 
@@ -9,8 +15,7 @@
         /// invoke methods and access or modify object properties
         /// even if the their details not known at compile time
         /// </summary>
-        /// <param name="args"></param>
-        static void Main(string[] args)
+        private static void ReflectionFn()
         {
             Type mainType = typeof(ExampleClassReflection);
             //display name of type
@@ -27,7 +32,6 @@
                 }
             }
             var nestedProperty = mainType.GetProperty("Person");
-
         }
     }
     public class ExampleClassReflection
